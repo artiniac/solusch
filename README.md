@@ -22,8 +22,9 @@ No build step, no dependencies. Open `index.html` and it runs.
 ## Deploying (GitHub Pages, free)
 
 1. Push this folder to its own GitHub repo (`artiniac/solusch`).
-2. Nothing to click: `.github/workflows/pages.yml` runs on the first push, enables GitHub Pages, deploys the site, and sets the custom domain to `solusch.com`. Watch it under the repo's **Actions** tab (about a minute). Fallback if it cannot flip the switch: **Settings → Pages → Source: GitHub Actions**, then type `solusch.com` under Custom domain.
-3. At the registrar where you bought solusch.com, add these DNS records (remove any existing A or parking record on `@` first):
+2. `.github/workflows/pages.yml` runs on the first push, enables GitHub Pages, and deploys the site (about a minute; watch the repo's **Actions** tab). It is live at `https://artiniac.github.io/solusch/` right away.
+3. Once, by hand: **Settings → Pages → Custom domain**, type `solusch.com`, Save. When the certificate appears (5 to 30 minutes), tick **Enforce HTTPS** on the same page. GitHub does not allow a workflow to set either of these.
+4. At the registrar where you bought solusch.com, add these DNS records (remove any existing A or parking record on `@` first):
 
    | Type | Host | Value |
    |---|---|---|
